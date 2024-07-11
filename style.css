@@ -275,6 +275,16 @@ background-attachment: fixed;
    body{
     font-size: 12px;
    }
+   .footer {
+    flex-direction: column;
+    text-align: center;
+}
+.footer .social-icons {
+   
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
 }
 @media (max-width: 300px ){
    body{
@@ -283,4 +293,14 @@ background-attachment: fixed;
    .cards .icon {
     font-size: 1.5em;
    }
+   .footer {
+    flex-direction: column;
+    text-align: center;
+}
+.footer .social-icons {
+   
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
 }

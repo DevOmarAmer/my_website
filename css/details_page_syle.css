@@ -222,4 +222,14 @@ main {
     main {
         padding: 100px 10px;
     }
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer .social-icons {
+       
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
