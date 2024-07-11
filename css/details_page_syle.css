@@ -100,6 +100,12 @@ main {
     list-style: disc;
     padding-left: 20px;
 }
+.gallery-wrapper {
+    position: relative;
+    overflow: hidden; /* Hide the scrollbars */
+    margin: 20px 0;
+}
+
 .gallery {
     display: flex;
     overflow-x: auto; /* Enables horizontal scrolling */
@@ -118,7 +124,24 @@ main {
 .gallery img:last-child {
     margin-right: 0; /* Removes margin from the last image */
 }
+.gallery-wrapper::before, .gallery-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px; /* Width of the gradient */
+    z-index: 1;
+}
 
+.gallery-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(20, 21, 49, 1), rgba(20, 21, 49, 0));
+}
+
+.gallery-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(20, 21, 49, 1), rgba(20, 21, 49, 0));
+}
 /* @media (min-width: 768px) {
     .gallery {
         max-width: 600px; 
