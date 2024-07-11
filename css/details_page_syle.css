@@ -182,10 +182,11 @@ main {
 } */
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     header {
         flex-direction: column;
         padding: 10px;
+        font-size: 0.8em;
     }
 
     header nav {
@@ -201,7 +202,7 @@ main {
     }
 
     header nav ul li {
-        /* padding-right: 10px; */
+        
         margin: 10px ;
     }
 
@@ -222,6 +223,8 @@ main {
     main {
         padding: 100px 10px;
     }
+    
+    
     .footer {
         flex-direction: column;
         text-align: center;
