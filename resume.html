@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Amer | Flutter Developer - CV</title>
+    <link rel="stylesheet" href="css/resume_style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-buttons">
+            <button class="left-button" onclick="goBack()">Back</button>
+            <h1>Omar Amer</h1>
+            <button class="right-button" onclick="downloadCV()">Download CV</button>
+        </div>
+        <h3 class="subtitle">Flutter Developer</h3>
+    </header>
+
+    <div class="container">
+        <img id="profileImage" src="image/omar.jpg" alt="Omar Amer's Photo" class="profile-photo">
+        <p>Location: Cairo, Egypt</p>
+        <p>Phone: +20 1151056694 | Email: <a href="mailto:omahar1907@gmail.com">omahar1907@gmail.com</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/omar-amer-fathy" target="_blank">LinkedIn</a> |
+            <a href="https://www.github.com/omaaramer" target="_blank">GitHub</a>
+        </p>
+
+        <!-- Modal for full-screen image -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+
+        <section class="profile">
+            <h2>Profile</h2>
+            <p>Motivated Computer Science Engineering graduate with a keen interest in mobile app development, particularly in Flutter. Proficient in Dart and experienced with versioning tools. Seeking opportunities to apply skills and gain experience in developing innovative applications.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Proficient in Flutter framework and Dart programming language</li>
+                <li>Responsive and Adaptive UI Design</li>
+                <li>Cross-Platform Mobile Development (iOS & Android)</li>
+                <li>RESTful APIs Integration</li>
+                <li>Firebase Integration</li>
+                <li>State Management (Provider, Bloc, GetX)</li>
+                <li>Clean Architecture</li>
+                <li>Performance Optimization</li>
+                <li>CI/CD Implementation</li>
+                <li>Strong problem-solving skills</li>
+                <li>Familiarity with JSON</li>
+                <li>Git and GitHub</li>
+                <li>SOLID Principles</li>
+                <li>Design Patterns</li>
+                <li>Clean Code</li>
+            </ul>
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <p><strong>Bachelor of Science in Computer Science Engineering</strong></p>
+            <p>Matrouh University, Egypt</p>
+            <p>Graduated: September 2024 | GPA: 3.2/4.0</p>
+            <h3>Graduation Project:</h3>
+            <p>A Flutter mobile app integrated with an IoT device in vehicles to detect fire or smoke, sending real-time alerts to users with push notifications and sound. It also provides sensor status, car location, and fire detection statistics.</p>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Skill Swap:</strong> A mobile app allowing users to exchange skills and services, built using Flutter and Firebase.</li>
+                <li><strong>Notes App:</strong> A cross-platform notes application with CRUD operations and integrated cloud storage for data synchronization.</li>
+                <li><strong>Weather App:</strong> Developed a weather forecasting app that fetches real-time data from an API with an intuitive UI.</li>
+                <li><strong>Bookly App:</strong> A mobile application helping users discover and read free books online using Flutter.</li>
+                <li><strong>Chat App:</strong> A real-time chat application built with Flutter and Firebase, featuring messaging and notifications.</li>
+                <li><strong>News App:</strong> A news aggregation app fetching the latest headlines from a news API.</li>
+            </ul>
+        </section>
+
+        <section class="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>Arabic</li>
+                <li>English</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Omar Amer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function downloadCV() {
+            const link = document.createElement('a');
+            link.href = 'files/Omar_Amer_Flutter_Developer_CV2.pdf'; // Replace with the path to your CV file
+            link.download = 'Omar_Amer_CV.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+       
+        // Function to open the modal
+        document.getElementById('profileImage').onclick = function() {
+            openModal(this.src);
+        };
+
+        function openModal(src) {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            modal.style.display = "block"; // Show the modal
+            modalImage.src = src; // Set the image source to the clicked image
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none"; // Hide the modal
+        }
+    
+    </script>
+</body>
+
+</html>

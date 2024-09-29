@@ -25,8 +25,8 @@
             <a href="#services">services</a>
             <a href="#projects">projects</a>
             <a href="#contact">contact</a>
+            <a href="resume.html" >My CV</a>
         </nav>
-     
         
     </header>
 <!-- end header section  -->
@@ -41,6 +41,7 @@
             
             
             <a href="#projects" class="main-ptn">Vew my work</a>
+            <a href="resume.html" class="main-ptn">View My CV</a>
 
             <div class="social-icons">
                 <a href="https://www.facebook.com/profile.php?id=100045625816135" target="_blank" rel="noopener noreferrer">
@@ -114,7 +115,7 @@
             <div class="project-card">
                 <a href="skill_swap_details.html">
                     <div class="pro-image">
-                        <img src="image/Skill Swap Flutter Mobile Application.png" >
+                        <img src="image/skill_swap/Skill Swap App.png" >
                     </div>
                 </a>
                     <div class="pro-info">
@@ -132,7 +133,7 @@
             <div class="project-card">
                 <a href="bookly-details.html">
                     <div class="pro-image">
-                        <img src="image/bookly_image.png" alt="Project Image">
+                        <img src="image/bookly/bokly_photo.jpg" alt="Project Image">
                     </div>
                 </a>
                     <div class="pro-info">
@@ -146,12 +147,90 @@
                     </div>
                 
             </div>
+
+            <div class="project-card">
+                <a href="notes_app.html">
+                    <div class="pro-image">
+                        <img src="image/notes/notes-photo.jpg" alt="Notes App Image">
+                    </div>
+                </a>
+                <div class="pro-info">
+                    <p>Organize your thoughts and tasks efficiently with the Notes App.</p>
+            
+                    <strong>
+                        <span>
+                            Notes App
+                        </span>
+                        <a href="notes_app.html" class="more-details">More Details</a>
+                    </strong>
+                </div>
+            </div>
+            
             
         </div>
     </section>
 <!-- end project section  -->
 
 <!-- start contact section  -->
+<!-- <section class="cards-contact" id="contact">
+    <h2 class="title">Let's work together</h2>
+    <div class="container">
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="info">
+                <h3>Phone</h3>
+                <p>+2 01151056694</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info">
+                <h3>Email</h3>
+                <p>omahar1907@gmail.com</p>
+            </div>
+        </div>
+
+        <form action="your_form_handler_url" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        const name = this.name.value.trim();
+        const email = this.email.value.trim();
+        const message = this.message.value.trim();
+        let valid = true;
+
+        if (!name) {
+            valid = false;
+            alert('Please enter your name.');
+        }
+        if (!email || !email.includes('@')) {
+            valid = false;
+            alert('Please enter a valid email.');
+        }
+        if (!message) {
+            valid = false;
+            alert('Please enter a message.');
+        }
+
+        if (!valid) {
+            e.preventDefault(); // Prevent form submission
+        }
+    });
+</script> -->
+
+
 <section class=" cards-contact" id="contact" >
     <h2 class="title">Let's work together</h2>
     <div class="container">
@@ -183,7 +262,7 @@
 <!-- start footer section  -->
 
     <footer class="footer">
-        <p class="footer-title"> copyrights @ <span>Omar Amer</span>
+        <p class="footer-title"> &copy; 2024 <span>Omar Amer</span>. All Rights Reserved.</p>
         </p>
 
         <div class="social-icons">
