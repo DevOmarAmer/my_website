@@ -6,6 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Amer | Flutter Developer - CV</title>
     <link rel="stylesheet" href="css/resume_style.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8); 
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            padding: 20px;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .image-dimensions {
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +62,7 @@
     </header>
 
     <div class="container">
-        <img id="profileImage" src="image/omar.jpg" alt="Omar Amer's Photo" class="profile-photo">
+        <img id="profileImage" src="image/omar.jpg" alt="Omar Amer's Photo" class="profile-photo" onclick="showImage()">
         <p>Location: Cairo, Egypt</p>
         <p>Phone: +20 1151056694 | Email: <a href="mailto:omahar1907@gmail.com">omahar1907@gmail.com</a></p>
         <p>
@@ -27,16 +70,9 @@
             <a href="https://www.github.com/omaaramer" target="_blank">GitHub</a>
         </p>
 
-        <!-- Modal for full-screen image -->
-        <div id="imageModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImage">
-            <div id="caption"></div>
-        </div>
-
         <section class="profile">
             <h2>Profile</h2>
-            <p>Motivated Computer Science Engineering graduate with a keen interest in mobile app development, particularly in Flutter. Proficient in Dart and experienced with versioning tools. Seeking opportunities to apply skills and gain experience in developing innovative applications.</p>
+            <p>I am a recent graduate with a degree in Computer Science from the Faculty of Computers and Artificial Intelligence, Class of 2024. I specialize in mobile app development using Flutter and have a strong passion for building efficient, cross-platform applications. My experience includes working with Dart, Firebase, and various APIs to create user-friendly and functional apps. I am constantly expanding my knowledge by solving development challenges and sharing insights with the Flutter community. I am driven by a desire to innovate and contribute to impactful projects in the tech industry.</p>
         </section>
 
         <section class="skills">
@@ -62,22 +98,40 @@
 
         <section class="education">
             <h2>Education</h2>
-            <p><strong>Bachelor of Science in Computer Science Engineering</strong></p>
-            <p>Matrouh University, Egypt</p>
+            <p><strong>Faculty of Computer Science and Artificial Intelligence, Matrouh University, Egypt</strong></p>
+            <p><strong>Bachelor of Computer Science  2020 - 2024</strong></p>
             <p>Graduated: September 2024 | GPA: 3.2/4.0</p>
-            <h3>Graduation Project:</h3>
+            <h3>Graduation Project <strong>(Excellent)</strong></h3>
             <p>A Flutter mobile app integrated with an IoT device in vehicles to detect fire or smoke, sending real-time alerts to users with push notifications and sound. It also provides sensor status, car location, and fire detection statistics.</p>
         </section>
 
         <section class="projects">
             <h2>Projects</h2>
             <ul>
-                <li><strong>Skill Swap:</strong> A mobile app allowing users to exchange skills and services, built using Flutter and Firebase.</li>
-                <li><strong>Notes App:</strong> A cross-platform notes application with CRUD operations and integrated cloud storage for data synchronization.</li>
-                <li><strong>Weather App:</strong> Developed a weather forecasting app that fetches real-time data from an API with an intuitive UI.</li>
-                <li><strong>Bookly App:</strong> A mobile application helping users discover and read free books online using Flutter.</li>
-                <li><strong>Chat App:</strong> A real-time chat application built with Flutter and Firebase, featuring messaging and notifications.</li>
-                <li><strong>News App:</strong> A news aggregation app fetching the latest headlines from a news API.</li>
+                <li>
+                    <strong><a href="skill_swap_details.html" target="_blank">Skill Swap:</a></strong>
+                    A mobile app allowing users to exchange skills and services, built using Flutter and Firebase.
+                </li>
+                <li>
+                    <strong><a href="notes_app.html" target="_blank">Notes App:</a></strong>
+                    A cross-platform notes application with CRUD operations and integrated cloud storage for data synchronization.
+                </li>
+                <li>
+                    <strong><a href="project.html?id=weather-app" target="_blank">Weather App:</a></strong>
+                    Developed a weather forecasting app that fetches real-time data from an API with an intuitive UI.
+                </li>
+                <li>
+                    <strong><a href="bookly-details.html" target="_blank">Bookly App:</a></strong>
+                    A mobile application helping users discover and read free books online using Flutter.
+                </li>
+                <li>
+                    <strong><a href="project.html?id=chat-app" target="_blank">Chat App:</a></strong>
+                    A real-time chat application built with Flutter and Firebase, featuring messaging and notifications.
+                </li>
+                <li>
+                    <strong><a href="project.html?id=news-app" target="_blank">News App:</a></strong>
+                    A news aggregation app fetching the latest headlines from a news API.
+                </li>
             </ul>
         </section>
 
@@ -94,6 +148,15 @@
         <p>&copy; 2024 Omar Amer. All rights reserved.</p>
     </footer>
 
+    <!-- Modal for displaying image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Omar Amer's Full Image">
+            <div class="image-dimensions" id="imageDimensions"></div>
+        </div>
+    </div>
+
     <script>
         function goBack() {
             window.history.back();
@@ -107,24 +170,37 @@
             link.click();
             document.body.removeChild(link);
         }
-       
-        // Function to open the modal
-        document.getElementById('profileImage').onclick = function() {
-            openModal(this.src);
-        };
 
-        function openModal(src) {
-            const modal = document.getElementById("imageModal");
-            const modalImage = document.getElementById("modalImage");
-            modal.style.display = "block"; // Show the modal
-            modalImage.src = src; // Set the image source to the clicked image
+        function showImage() {
+            const img = document.getElementById('profileImage');
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const dimensions = document.getElementById('imageDimensions');
+
+            // Set the image in the modal
+            modalImage.src = img.src;
+
+            // Get image dimensions
+            const width = img.naturalWidth;
+            const height = img.naturalHeight;
+            dimensions.textContent = `Image Dimensions: Width = ${width}px, Height = ${height}px`;
+
+            // Display the modal
+            modal.style.display = 'block';
         }
 
-        // Function to close the modal
         function closeModal() {
-            document.getElementById("imageModal").style.display = "none"; // Hide the modal
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
         }
-    
+
+        // Close modal when user clicks outside of the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
     </script>
 </body>
 
