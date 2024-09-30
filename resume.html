@@ -153,7 +153,6 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <div class="modal-content">
             <img id="modalImage" src="" alt="Omar Amer's Full Image">
-            <div class="image-dimensions" id="imageDimensions"></div>
         </div>
     </div>
 
@@ -175,15 +174,9 @@
             const img = document.getElementById('profileImage');
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
-            const dimensions = document.getElementById('imageDimensions');
 
             // Set the image in the modal
             modalImage.src = img.src;
-
-            // Get image dimensions
-            const width = img.naturalWidth;
-            const height = img.naturalHeight;
-            dimensions.textContent = `Image Dimensions: Width = ${width}px, Height = ${height}px`;
 
             // Display the modal
             modal.style.display = 'block';
@@ -194,7 +187,6 @@
             modal.style.display = 'none';
         }
 
-        // Close modal when user clicks outside of the image
         window.onclick = function(event) {
             const modal = document.getElementById('imageModal');
             if (event.target == modal) {
