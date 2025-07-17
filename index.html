@@ -4,329 +4,550 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
-     <!-- main template. css file -->
-    <link rel="stylesheet" href="style.css">
-    <!-- render all elements normaly -->
+    <meta name="description" content="Omar Amer - Flutter Developer Portfolio">
+    <meta name="keywords" content="Flutter, Developer, Mobile Apps, Portfolio, Omar Amer">
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- font awsome library -->
-    <link rel="stylesheet" href="css/all.min.css"> 
-    <title>omar amer</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/modern.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="image/favicon.svg">
+    <title>Omar Amer | Flutter Developer</title>
 </head>
 <body>
 
-<!-- start header section  -->
+<!-- Preloader -->
+<div class="preloader">
+    <div class="loader">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+</div>
 
-    <header>
-        <a href="#" class="logo"> Omar</a>
+<!-- Start Header Section -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Omar<span>Amer</span></a>
 
-        <nav class="navigation">
-
-            <a href="#services">services</a>
-            <a href="#projects">projects</a>
-            <a href="#contact">contact</a>
-            <a href="resume.html" >My CV</a>
-        </nav>
-        
+            <nav class="navigation">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="resume.html" class="nav-btn">My CV</a>
+            </nav>
+            
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </header>
-<!-- end header section  -->
+<!-- End Header Section -->
 
-<!-- start main section  -->
+<!-- Mobile Navigation -->
+<div class="mobile-nav">
+    <nav class="mobile-nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.html">My CV</a>
+    </nav>
+</div>
+<div class="mobile-nav-overlay"></div>
 
-    <section class="main">
-        <div>
-            <h2>Hello, I'm Omar <br> <span>Flutter Developer</span></h2>
-            <h3>Turning ideas into digital reality</h3>
+<!-- Start Hero Section -->
+<section class="hero" style="background-image: url('image/omar_cover_2.png');">
+  <div class="container hero-content">
+    <h4 id="welcome-text">Welcome to my Portfolio</h4>
 
-            
-            
-            <a href="#projects" class="main-ptn">Vew my work</a>
-            <a href="resume.html" class="main-ptn">View My CV</a>
+    <h1>
+      <span class="iam-wrapper">I'm 
+        <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+      </span>
+    </h1>
 
-            <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=100045625816135" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/omar-amer-fathy" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.github.com/omaaramer" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-                  <a href="https://www.instagram.com/your-username" target="_blank" rel="noopener noreferrer">
-                     <i class="fab fa-instagram-square"></i>
-                </a>
+    <p>Turning ideas into visual experiences with creativity and precision</p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="resume.html" class="btn btn-outline">View My CV</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=100045625816135" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/omar-amer-fathy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.github.com/omaaramer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- End Hero Section -->
+
+<!-- Start About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title animate-on-scroll" data-animation="fadeIn">
+                <h2>About Me</h2>
             </div>
             
-        </div>
-       
-        
-
-    </section>
-<!-- end main section  -->
-
-
-<!-- start services section  -->
-    <section class="cards" id="services">
-        <h2 class="title">services</h2>
-        <div class="container">
-           
-           
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-mobile-alt fa-2x"></i>
+            <div class="about-content">
+                <div class="about-image animate-on-scroll" data-animation="fadeInLeft" data-delay="0.2">
+                    <img src="image/omar.jpg" alt="Omar Amer">
                 </div>
-                <div class="info">
+                <div class="about-text animate-on-scroll" data-animation="fadeInRight" data-delay="0.4">
                     <h3>Flutter Developer</h3>
-                    <p>Specialized in building natively compiled applications for mobile, web, and desktop from a single codebase using Flutter.</p>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-laptop-code fa-2x"></i>
-                </div>
-                <div class="info">
-                    <h3>Responsive and Adaptive UI</h3>
-                    <p>Expertise in creating user interfaces that work seamlessly across a wide range of devices and screen sizes, ensuring optimal user experience.</p>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-paint-brush fa-2x"></i>
-                </div>
-                <div class="info">
-                    <h3>UI/UX Design</h3>
-                    <p>Proficient in designing user-friendly and visually appealing interfaces that enhance user satisfaction and improve the overall usability of applications.</p>
-                </div>
-            </div>
-            
-        </div>
-
-    </section> 
-<!-- end services section  -->
-
-<!-- start project section  -->
-    <section class="project" id="projects" >
-        <h2 class="title">Projects</h2>
-
-        <div class="container">
-            <div class="project-card">
-                <a href="skill_swap_details.html">
-                    <div class="pro-image">
-                        <img src="image/skill_swap/Skill Swap App.png" >
+                    <p>I am a passionate Flutter Developer with expertise in building cross-platform mobile applications. I specialize in creating beautiful, responsive, and user-friendly interfaces that provide exceptional user experiences.</p>
+                    <p>With a strong foundation in Dart programming and the Flutter framework, I develop applications that work seamlessly across iOS, Android, and web platforms.</p>
+                    <div class="about-contact">
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-user-tag primary-icon"></i>
+                                <div>
+                                    <span class="contact-label">Name</span>
+                                    <span class="contact-value">Omar Amer</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope primary-icon"></i>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:omahar1907@gmail.com" class="contact-value">omahar1907@gmail.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt primary-icon"></i>
+                                <div>
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Cairo, Egypt</span>
+                                </div>
+                            </li>
+                            <li class="availability">
+                                <i class="fas fa-briefcase primary-icon"></i>
+                                <div>
+                                    <span class="contact-label">Freelance</span>
+                                    <span class="contact-value available">Available</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </a>
-                    <div class="pro-info">
-                        <p>SkillSwap is a Flutter application that helps users discover and connect with skilled individuals.</p>
-                        <strong>
-                            <span>
-                                SkillSwap
-                            </span>
-                            <a href="skill_swap_details.html" class="more-ditales" >more-ditales</a>
-                        </strong>
-                        
-                    </div>
-            </div>
-          
-            <div class="project-card">
-                <a href="bookly-details.html">
-                    <div class="pro-image">
-                        <img src="image/bookly/bokly_photo.jpg" alt="Project Image">
-                    </div>
-                </a>
-                    <div class="pro-info">
-                        <p>Manage and track your reading habits with the Bookly App.</p>
-                        <strong>
-                            <span>
-                                Bookly App
-                            </span>
-                            <a href="bookly-details.html" class="more-details">More Details</a>
-                        </strong>
-                    </div>
-                
-            </div>
-
-            <div class="project-card">
-                <a href="notes_app.html">
-                    <div class="pro-image">
-                        <img src="image/notes/notes-photo.jpg" alt="Notes App Image">
-                    </div>
-                </a>
-                <div class="pro-info">
-                    <p>Organize your thoughts and tasks efficiently with the Notes App.</p>
-            
-                    <strong>
-                        <span>
-                            Notes App
-                        </span>
-                        <a href="notes_app.html" class="more-details">More Details</a>
-                    </strong>
                 </div>
             </div>
-            <div class="project-card">
-                <a href="dashboard_details.html">
-                    <div class="pro-image">
-                        <img src="image/dashboard/photo.jpg" alt="Notes App Image">
-                    </div>
-                </a>
-                <div class="pro-info">
-                    <p>Adaptive design for mobile, tablet, and desktop screens.</p>
-            
-                    <strong>
-                        <span>
-                            Dashboard
-                        </span>
-                        <a href="dashboard_details.html" class="more-details">More Details</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <a href="fire_detection.html">
-                    <div class="pro-image">
-                        <img src="image/firedetection app/photo.png" alt="Notes App Image">
-                    </div>
-                </a>
-                <div class="pro-info">
-                    <p>Real-time fire and smoke detection Flutter app with instant notifications.</p>
-            
-                    <strong>
-                        <span>
-                            Fire Detection
-                        </span>
-                        <a href="fire_detection.html" class="more-details">More Details</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <a href="weather_app.html">
-                    <div class="pro-image">
-                        <img src="image/weather_app/photo.jpg" alt="Notes App Image">
-                    </div>
-                </a>
-                <div class="pro-info">
-                    <p>Real-time weather information (temperature, humidity, wind speed, etc.)</p>
-            
-                    <strong>
-                        <span>
-                            Weather App
-                        </span>
-                        <a href="weather_app.html" class="more-details">More Details</a>
-                    </strong>
-                </div>
-            </div>
-            
-            
         </div>
     </section>
-<!-- end project section  -->
+<!-- End About Section -->
 
-<!-- start contact section  -->
-<!-- <section class="cards-contact" id="contact">
-    <h2 class="title">Let's work together</h2>
+
+<!-- Start Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title animate-on-scroll" data-animation="fadeIn">
+                <h2>My Services</h2>
+                <p>Specialized services I offer to help bring your mobile app ideas to life</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll" data-animation="zoomIn" data-delay="0.1">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Building cross-platform mobile applications using Flutter framework for both Android and iOS platforms with native-like performance.</p>
+                </div>
+
+                <div class="service-card animate-on-scroll" data-animation="zoomIn" data-delay="0.2">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive, beautiful, and user-friendly interfaces that enhance user experience and engagement for mobile applications.</p>
+                </div>
+
+                <div class="service-card animate-on-scroll" data-animation="zoomIn" data-delay="0.3">
+                    <div class="service-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Bug Fixing & Optimization</h3>
+                    <p>Identifying and resolving bugs, performance issues, and optimizing existing Flutter applications for better performance.</p>
+                </div>
+
+                <div class="service-card animate-on-scroll" data-animation="zoomIn" data-delay="0.4">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Integration</h3>
+                    <p>Integrating and managing databases like Firebase, SQLite, Hive, and others with mobile applications for efficient data storage.</p>
+                </div>
+
+                <div class="service-card animate-on-scroll" data-animation="zoomIn" data-delay="0.5">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>API Integration</h3>
+                    <p>Connecting mobile applications with various RESTful APIs, GraphQL, and web services to enhance functionality and features.</p>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>App Deployment</h3>
+                    <p>Managing the entire process of publishing applications to Google Play Store and Apple App Store, including app store optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End Services Section -->
+
+<!-- Start Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-title animate-on-scroll" data-animation="fadeIn">
+                <h2>My Projects</h2>
+                <p class="subTitle">A showcase of my recent Flutter development work</p>
+            </div>
+            
+            <div class="projects-filter animate-on-scroll" data-animation="fadeInUp" data-delay="0.2">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="ui">UI/UX</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll" data-animation="fadeInUp" data-delay="0.3" data-category="mobile">
+                    <div class="project-image">
+                        <img src="image/skill_swap/Skill Swap App.png" alt="SkillSwap App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="skill_swap_details.html" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="https://github.com/omaaramer/skill_swap" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Flutter App</span>
+                        <h3 class="project-title">SkillSwap</h3>
+                        <p class="project-desc">Innovative skill exchange platform with user profiles, skill matching algorithm, in-app messaging, and review system implemented with Flutter and Firebase</p>
+                        <a href="skill_swap_details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll" data-animation="fadeInUp" data-delay="0.4" data-category="mobile">
+                    <div class="project-image">
+                        <img src="image/bookly/bokly_photo.jpg" alt="Bookly App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="bookly-details.html" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="https://github.com/omaaramer/bookly_app_clean_arch" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Flutter App</span>
+                        <h3 class="project-title">Bookly App</h3>
+                        <p class="project-desc">A sophisticated book discovery platform with clean UI, search functionality, and integrated reading experience using Flutter and Google Books API</p>
+                        <a href="bookly-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll" data-animation="fadeInUp" data-delay="0.5" data-category="mobile ui">
+                    <div class="project-image">
+                        <img src="image/notes/notes-photo.jpg" alt="Notes App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="notes_app.html" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="https://github.com/omaaramer/notes_app" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Flutter App</span>
+                        <h3 class="project-title">Notes App</h3>
+                        <p class="project-desc">Feature-rich note-taking application with cloud sync, categories, rich text formatting, and dark mode support built with Flutter and Firebase</p>
+                        <a href="notes_app.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll" data-animation="fadeInUp" data-delay="0.6" data-category="mobile web">
+                    <div class="project-image">
+                        <img src="image/dashboard/photo.jpg" alt="Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="dashboard_details.html" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="https://github.com/omaaramer/flutter_responsive_dashboard" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Flutter App</span>
+                        <h3 class="project-title">Dashboard</h3>
+                        <p class="project-desc">Responsive admin dashboard with data visualization, user management, and analytics features that adapts seamlessly to mobile, tablet, and desktop screens</p>
+                        <a href="dashboard_details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll" data-animation="fadeInUp" data-delay="0.7" data-category="mobile">
+                    <div class="project-image">
+                        <img src="image/firedetection app/photo.png" alt="Fire Detection App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="fire_detection.html" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="https://github.com/omaaramer/fire_detection" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Flutter App</span>
+                        <h3 class="project-title">Fire Detection</h3>
+                        <p class="project-desc">IoT-integrated mobile application for real-time fire and smoke detection in vehicles with push notifications, location tracking, and comprehensive safety analytics</p>
+                        <a href="fire_detection.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll" data-animation="fadeInUp" data-delay="0.8" data-category="mobile ui">
+                    <div class="project-image">
+                        <img src="image/weather_app/photo.jpg" alt="Weather App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="weather_app.html" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="https://github.com/omaaramer/weather_app" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Flutter App</span>
+                        <h3 class="project-title">Weather App</h3>
+                        <p class="project-desc">Elegant weather application featuring real-time forecasts, hourly and weekly predictions, location-based services, and beautiful animated weather visualizations</p>
+                        <a href="weather_app.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-more animate-on-scroll" data-animation="fadeInUp" data-delay="0.9">
+                <a href="https://github.com/omaaramer" class="btn" target="_blank">View More on GitHub <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+<!-- End Projects Section -->
+
+<!-- Start Contact Section -->
+<section class="contact" id="contact">
     <div class="container">
-        <div class="card">
-            <div class="icon">
-                <i class="fas fa-phone"></i>
+        <div class="section-title animate-on-scroll" data-animation="fadeIn">
+            <h2>Get In Touch</h2>
+            <p>Let's discuss your project or just say hello</p>
+        </div>
+        
+        <div class="contact-content">
+            <div class="contact-info animate-on-scroll" data-animation="fadeInLeft" data-delay="0.2">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p><a href="mailto:omahar1907@gmail.com">omahar1907@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+201151056694">+2 01151056694</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Location</h3>
+                        <p>Cairo, Egypt</p>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <div class="social-section">
+                      <h3 class="social-title">Connect With Me</h3>
+                      <div class="social-grid">
+                        <a href="https://www.facebook.com/profile.php?id=100045625816135" class="social-link facebook">
+                          <i class="fab fa-facebook-f"></i>
+                          <span>Facebook</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/omar-amer-fathy" class="social-link linkedin">
+                          <i class="fab fa-linkedin-in"></i>
+                          <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.github.com/omaaramer" class="social-link github">
+                          <i class="fab fa-github"></i>
+                          <span>GitHub</span>
+                        </a>
+                      </div>
+                    </div>
+                </div>
             </div>
-            <div class="info">
-                <h3>Phone</h3>
-                <p>+2 01151056694</p>
+            
+            <div class="contact-form-container animate-on-scroll" data-animation="fadeInRight" data-delay="0.3">
+                <h3>Send Message</h3>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="name" placeholder="Your Name" required class="form-control">
+                        <div class="form-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Your Email" required class="form-control">
+                        <div class="form-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-briefcase"></i>
+                        <select name="inquiry_type" required class="form-control">
+                            <option value="" disabled selected>Select Inquiry Type</option>
+                            <option value="project">Project Inquiry</option>
+                            <option value="job">Job Opportunity</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-pen"></i>
+                        <input type="text" name="subject" placeholder="Subject" required class="form-control">
+                        <div class="form-feedback"></div>
+                    </div>
+                    <div class="form-group textarea">
+                        <i class="fas fa-comment-alt"></i>
+                        <textarea name="message" placeholder="Your Message" rows="5" required class="form-control"></textarea>
+                        <div class="form-feedback"></div>
+                    </div>
+                    <div class="form-group form-checkbox">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I agree to be contacted regarding my inquiry</label>
+                        <div class="form-feedback"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                        <span class="btn-loader"><i class="fas fa-circle-notch fa-spin"></i></span>
+                    </button>
+                    <div class="form-status"></div>
+                </form>
             </div>
         </div>
-
-        <div class="card">
-            <div class="icon">
-                <i class="fas fa-envelope"></i>
-            </div>
-            <div class="info">
-                <h3>Email</h3>
-                <p>omahar1907@gmail.com</p>
-            </div>
-        </div>
-
-        <form action="your_form_handler_url" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
     </div>
 </section>
-
-<script>
-    document.querySelector('form').addEventListener('submit', function(e) {
-        const name = this.name.value.trim();
-        const email = this.email.value.trim();
-        const message = this.message.value.trim();
-        let valid = true;
-
-        if (!name) {
-            valid = false;
-            alert('Please enter your name.');
-        }
-        if (!email || !email.includes('@')) {
-            valid = false;
-            alert('Please enter a valid email.');
-        }
-        if (!message) {
-            valid = false;
-            alert('Please enter a message.');
-        }
-
-        if (!valid) {
-            e.preventDefault(); // Prevent form submission
-        }
-    });
-</script> -->
+<!-- End Contact Section -->
 
 
-<section class=" cards-contact" id="contact" >
-    <h2 class="title">Let's work together</h2>
-    <div class="container">
-
-        <div class="card">
-            <div class="icon">
-                <i class="fas fa-phone"></i>
-            </div>
-            <div class="info">
-                <h3>Phone</h3>
-                <p>+2 01151056694</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="icon">
-                <i class="fas fa-envelope"></i>
-            </div>
-            <div class="info">
-                <h3>Email</h3>
-                <p> omahar1907@gmail.com </p>
-            </div>
-        </div>
-          
-    </div>
-</section>
-<!-- end contact section  -->
-
-<!-- start footer section  -->
-
+<!-- Start Footer Section -->
     <footer class="footer">
-        <p class="footer-title"> &copy; 2024 <span>Omar Amer</span>. All Rights Reserved.</p>
-        </p>
-
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100045625816135"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://www.youtube.com"><i class="fab fa-youtube-square"></i></a>
-            <a href="https://www.instagtam.com"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://www.twitter.com"><i class="fab fa-twitter-square"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo animate-on-scroll">
+                    <a href="#">Omar<span>Amer</span></a>
+                    <p>Flutter Developer turning ideas into digital reality</p>
+                </div>
+                
+                <div class="footer-links animate-on-scroll">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="resume.html">My CV</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact animate-on-scroll">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:omahar1907@gmail.com">omahar1907@gmail.com</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+201151056694">+2 01151056694</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
+                </div>
+                
+                <div class="footer-social animate-on-scroll">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100045625816135" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/omar-amer-fathy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.github.com/omaaramer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom animate-on-scroll">
+                <p>&copy; 2023 <span>Omar Amer</span>. All Rights Reserved.</p>
+            </div>
         </div>
-
     </footer>
+<!-- End Footer Section -->
 
-<!-- end footer section  -->
+<!-- JavaScript for filtering projects -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    });
+</script>
 
 
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
