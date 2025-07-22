@@ -55,9 +55,12 @@ header {
 }
 @media (max-width: 576px) {
   
-    .header-buttons{
-        display: block;
-        align-items: center;
+    .header-buttons {
+        display: flex; /* لازم تفضل flex */
+        flex-direction: column; /* تخليهم تحت بعض */
+        justify-content: center;
+        align-items: center;  /* تخليهم في النص أفقياً */
+        gap: 10px; /* مسافة بين الأزرار لو تحب */
     }
     
 }

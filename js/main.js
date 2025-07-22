@@ -64,50 +64,51 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('scrolled');
         }
     });
+
+
+    
     
     // Mobile Navigation Toggle
-    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-    const mobileNav = document.querySelector('.mobile-nav');
-    const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
-    
-    if (mobileNavToggle && mobileNav && mobileNavOverlay) {
-        // Toggle mobile navigation
-        mobileNavToggle.addEventListener('click', function() {
-            mobileNav.classList.toggle('active');
-            mobileNavOverlay.classList.toggle('active');
-            
-            // Change icon based on menu state
-            const icon = this.querySelector('i');
-            if (mobileNav.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
+   const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+if (mobileNavToggle && mobileNav && mobileNavOverlay) {
+    mobileNavToggle.addEventListener('click', function() {
+        mobileNav.classList.toggle('active');
+        mobileNavOverlay.classList.toggle('active');
         
-        // Close mobile navigation when clicking on overlay
-        mobileNavOverlay.addEventListener('click', function() {
+        const icon = this.querySelector('i');
+        if (mobileNav.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    mobileNavOverlay.addEventListener('click', function() {
+        mobileNav.classList.remove('active');
+        mobileNavOverlay.classList.remove('active');
+        const icon = mobileNavToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    });
+
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
             mobileNav.classList.remove('active');
             mobileNavOverlay.classList.remove('active');
             const icon = mobileNavToggle.querySelector('i');
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
         });
-        
-        // Close mobile navigation when clicking on a link
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileNav.classList.remove('active');
-                mobileNavOverlay.classList.remove('active');
-                const icon = mobileNavToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            });
-        });
-    }
+    });
+}
+
+
 
     // Project filtering
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -165,98 +166,68 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Form submission
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Reset form status
-            const formStatus = contactForm.querySelector('.form-status');
-            if (formStatus) {
-                formStatus.textContent = '';
-                formStatus.className = 'form-status';
-                formStatus.style.display = 'none';
-            }
-            
-            // Validate all inputs
-            let isValid = true;
-            formInputs.forEach(input => {
-                if (!validateInput(input)) {
-                    isValid = false;
-                }
-            });
-            
-            if (!isValid) return false;
-            
-            // Show loading state
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            submitBtn.classList.add('loading');
-            
-            // Show sending message
-            if (formStatus) {
-                formStatus.textContent = 'Sending message...';
-                formStatus.style.display = 'block';
-            }
-            
-            // Prepare form data for sending
-            const formData = new FormData(contactForm);
-            const formDataObj = {};
-            formData.forEach((value, key) => {
-                formDataObj[key] = value;
-            });
-            
-            // Simulate sending email (in a real application, you would use a service like EmailJS, FormSubmit, or your own backend)
-            setTimeout(() => {
-                try {
-                    // This is where you would normally make an API call to send the email
-                    // For demonstration, we're simulating a successful submission
-                    
-                    // Success message
-                    if (formStatus) {
-                        formStatus.textContent = 'Your message has been sent successfully! I will get back to you soon.';
-                        formStatus.className = 'form-status success';
-                    }
-                    
-                    // Reset form
-                    contactForm.reset();
-                    
-                    // In a real implementation, you would use code like this:
-                    /*
-                    fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.ok) {
-                            formStatus.textContent = 'Your message has been sent successfully! I will get back to you soon.';
-                            formStatus.className = 'form-status success';
-                            contactForm.reset();
-                        } else {
-                            throw new Error('Form submission failed');
-                        }
-                    })
-                    .catch(error => {
-                        formStatus.textContent = 'Failed to send message. Please try again later.';
-                        formStatus.className = 'form-status error';
-                    })
-                    .finally(() => {
-                        submitBtn.classList.remove('loading');
-                    });
-                    */
-                } catch (error) {
-                    // Error message
-                    if (formStatus) {
-                        formStatus.textContent = 'Failed to send message. Please try again later.';
-                        formStatus.className = 'form-status error';
-                    }
-                }
-                
-                // Remove loading state
-                submitBtn.classList.remove('loading');
-            }, 1500); // Simulate network delay
-        });
+      contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formStatus = contactForm.querySelector('.form-status');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    // Reset form status
+    if (formStatus) {
+        formStatus.textContent = '';
+        formStatus.className = 'form-status';
+        formStatus.style.display = 'none';
+    }
+
+    // Validate inputs
+    let isValid = true;
+    formInputs.forEach(input => {
+        if (!validateInput(input)) {
+            isValid = false;
+        }
+    });
+
+    if (!isValid) return;
+
+    // Show loading
+    submitBtn.classList.add('loading');
+    if (formStatus) {
+        formStatus.textContent = 'Sending message...';
+        formStatus.style.display = 'block';
+    }
+
+    // Prepare custom HTML content
+    const htmlContent = `
+        <h2 style="color:#4CAF50;">New Inquiry</h2>
+        <p><strong>Name:</strong> ${contactForm.name.value}</p>
+        <p><strong>Email:</strong> ${contactForm.email.value}</p>
+        <p><strong>Inquiry Type:</strong> ${contactForm.inquiry_type.value}</p>
+        <p><strong>Subject:</strong> ${contactForm.subject.value}</p>
+        <p><strong>Message:</strong><br>${contactForm.message.value}</p>
+    `;
+
+    // Send Email via EmailJS
+    emailjs.send('service_rgookqa', 'template_xxg5yl9', {
+        name: contactForm.name.value,
+        email: contactForm.email.value,
+        inquiry_type: contactForm.inquiry_type.value,
+        subject: contactForm.subject.value,
+        message: contactForm.message.value,
+        message_html: htmlContent
+    })
+    .then(function(response) {
+        formStatus.textContent = 'Your message has been sent successfully! I will get back to you soon.';
+        formStatus.className = 'form-status success';
+        contactForm.reset();
+    }, function(error) {
+        formStatus.textContent = 'Failed to send message. Please try again later.';
+        formStatus.className = 'form-status error';
+    })
+    .finally(() => {
+        submitBtn.classList.remove('loading');
+    });
+});
+
     }
     
     // Input validation function
@@ -405,4 +376,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
         });
     }
+
+     // Mobile Navigation
+  // Mobile Navigation
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.onclick = () => {
+    navMenu.classList.toggle('open');
+};
+
+// قفل المينيو لما تضغط على لينك
+navLinks.forEach(link => {
+    link.onclick = () => {
+        navMenu.classList.remove('open');
+    };
+});
+
+
+
 });

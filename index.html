@@ -15,12 +15,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="image/favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="image/favicon.svg">
     <title>Omar Amer | Flutter Developer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+    emailjs.init("4pZettS9TXYU-e8J1"); // Public Key بتاعك
+    </script>
 </head>
 <body>
 
@@ -33,23 +39,38 @@
 </div>
 
 <!-- Start Header Section -->
-    <header id="header">
-        <div class="container header-container">
-            <a href="#" class="logo">Omar<span>Amer</span></a>
+  <header id="header">
+  <div class="container header-container">
+    <a href="#" class="logo">Omar<span>Amer</span></a>
 
-            <nav class="navigation">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-                <a href="resume.html" class="nav-btn">My CV</a>
-            </nav>
-            
-            <button class="mobile-nav-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
+    <!-- Desktop Navigation -->
+    <nav class="navigation desktop-nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.html" class="nav-btn">My CV</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-nav-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.html" class="nav-btn">My CV</a>
+    </nav>
+
+    <div class="mobile-nav-overlay"></div>
+  </div>
+</header>
+
+
 <!-- End Header Section -->
 
 <!-- Mobile Navigation -->
@@ -65,7 +86,7 @@
 <div class="mobile-nav-overlay"></div>
 
 <!-- Start Hero Section -->
-<section class="hero" style="background-image: url('image/omar_cover_2.png');">
+<section class="hero" style="background-image: url('image/omar_cover.png');">
   <div class="container hero-content">
     <h4 id="welcome-text">Welcome to my Portfolio</h4>
 
@@ -89,7 +110,7 @@
       <a href="https://www.linkedin.com/in/omar-amer-fathy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
       </a>
-      <a href="https://www.github.com/omaaramer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <a href="https://www.github.com/DevOmarAmer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
       <a href="https://www.instagram.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -237,7 +258,7 @@
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="skill_swap_details.html" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="https://github.com/omaaramer/skill_swap" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/DevOmarAmer/skill_swap" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -255,7 +276,7 @@
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="bookly-details.html" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="https://github.com/omaaramer/bookly_app_clean_arch" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/DevOmarAmer/bookly_app_clean_arch" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -273,7 +294,7 @@
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="notes_app.html" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="https://github.com/omaaramer/notes_app" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/DevOmarAmer/notes_app" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -291,7 +312,7 @@
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="dashboard_details.html" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="https://github.com/omaaramer/flutter_responsive_dashboard" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/DevOmarAmer/flutter_responsive_dashboard" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -309,7 +330,7 @@
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="fire_detection.html" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="https://github.com/omaaramer/fire_detection" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/DevOmarAmer/fire_detection" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -327,7 +348,7 @@
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="weather_app.html" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="https://github.com/omaaramer/weather_app" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/DevOmarAmer/weather_app" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -341,7 +362,7 @@
             </div>
             
             <div class="projects-more animate-on-scroll" data-animation="fadeInUp" data-delay="0.9">
-                <a href="https://github.com/omaaramer" class="btn" target="_blank">View More on GitHub <i class="fab fa-github"></i></a>
+                <a href="https://github.com/DevOmarAmer" class="btn" target="_blank">View More on GitHub <i class="fab fa-github"></i></a>
             </div>
         </div>
     </section>
@@ -399,7 +420,7 @@
                           <i class="fab fa-linkedin-in"></i>
                           <span>LinkedIn</span>
                         </a>
-                        <a href="https://www.github.com/omaaramer" class="social-link github">
+                        <a href="https://www.github.com/DevOmarAmer" class="social-link github">
                           <i class="fab fa-github"></i>
                           <span>GitHub</span>
                         </a>
@@ -496,7 +517,7 @@
                         <a href="https://www.linkedin.com/in/omar-amer-fathy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://www.github.com/omaaramer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <a href="https://www.github.com/DevOmarAmer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="https://www.instagram.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
